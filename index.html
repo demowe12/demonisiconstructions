@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nissi Constructions</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root{
+  --primary:#fbbf24;
+  --secondary:#92400e;
+  --bg:#020617;
+  --text:#f8fafc;
+  --card:rgba(255,255,255,.08);
+}
+
+/* LIGHT MODE */
+body.light{
+  --bg:#f8fafc;
+  --text:#020617;
+  --card:rgba(0,0,0,.08);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  transition:.4s;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 8%;
+  background:rgba(0,0,0,.7);
+  backdrop-filter:blur(10px);
+  z-index:999;
+}
+.logo{font-weight:800;color:var(--primary)}
+.nav-links{display:flex;gap:30px;list-style:none}
+.nav-links a{color:var(--text);text-decoration:none}
+.menu-toggle{display:none;font-size:1.5rem}
+
+/* HERO */
+header{
+  min-height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9)),
+  url('https://images.unsplash.com/photo-1503387762-592deb58ef4e') center/cover;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.hero h1{font-size:3.5rem;color:var(--primary)}
+.hero p{margin:20px 0}
+.btn{
+  padding:14px 35px;
+  border-radius:50px;
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:black;
+  text-decoration:none;
+  font-weight:700;
+  margin:5px;
+}
+
+/* SECTIONS */
+section{padding:90px 10%}
+.title{text-align:center;margin-bottom:60px}
+.services,.stats,.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  background:var(--card);
+  padding:35px;
+  border-radius:20px;
+  text-align:center;
+  transition:.4s;
+}
+.card:hover{transform:translateY(-10px)}
+
+/* GALLERY */
+.gallery img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:20px;
+  transition:.4s;
+}
+.gallery img:hover{transform:scale(1.08)}
+
+/* CONTACT */
+.contact{
+  background:var(--card);
+  padding:50px;
+  border-radius:30px;
+  text-align:center;
+}
+
+/* FLOATING BUTTONS */
+.whatsapp, .mode-toggle{
+  position:fixed;
+  bottom:25px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.6rem;
+  color:white;
+  z-index:999;
+}
+.whatsapp{
+  right:25px;
+  background:#25D366;
+}
+.mode-toggle{
+  right:90px;
+  background:#444;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nav-links{display:none;flex-direction:column;background:black;padding:20px;position:absolute;top:70px;right:8%}
+  .nav-links.active{display:flex}
+  .menu-toggle{display:block}
+  .hero h1{font-size:2.3rem}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav class="navbar">
+  <div class="logo">Nissi Constructions</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="menu-toggle"><i class="fa fa-bars"></i></div>
+</nav>
+
+<!-- HERO -->
+<header id="home">
+  <div class="hero" data-aos="zoom-in">
+    <h1>Nissi Constructions</h1>
+    <p>Trusted Residential Building Contractor</p>
+    <a href="tel:9972885369" class="btn">Call Now</a>
+    <a href="https://wa.me/919972885369" class="btn">Chat Now</a>
+  </div>
+</header>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="title"><h2>Our Services</h2></div>
+  <div class="services">
+    <div class="card" data-aos="fade-up"><i class="fa fa-house"></i><h3>House Construction</h3></div>
+    <div class="card" data-aos="fade-up"><i class="fa fa-ruler"></i><h3>Structural Work</h3></div>
+    <div class="card" data-aos="fade-up"><i class="fa fa-paint-roller"></i><h3>Finishing</h3></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="title"><h2>Project Gallery</h2></div>
+  <div class="gallery">
+    <img src="Screenshot 2026-01-17 173243.png">
+    <img src="Screenshot 2026-01-17 173254.png">
+    <img src="Screenshot 2026-01-17 173307.png">
+    <img src="Screenshot 2026-01-17 173703.png">
+    <img src="Screenshot 2026-01-17 173715.png">
+    <img src="Screenshot 2026-01-17 173728.png">
+    <img src="Screenshot 2026-01-17 173745.png">
+    <img src="Screenshot 2026-01-17 173757.png">
+    <img src="Screenshot 2026-01-17 173828.png">
+    <img src="Screenshot 2026-01-17 173849.png">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p>📞 9972885369<br>⏰ Open till 12 AM</p>
+  </div>
+</section>
+
+<!-- FLOATING BUTTONS -->
+<a href="https://wa.me/919972885369" class="whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+<div class="mode-toggle"><i class="fa fa-moon"></i></div>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+AOS.init({duration:1000,once:true});
+
+document.querySelector('.menu-toggle').onclick=()=>{
+  document.querySelector('.nav-links').classList.toggle('active');
+};
+
+document.querySelector('.mode-toggle').onclick=()=>{
+  document.body.classList.toggle('light');
+};
+</script>
+
+</body>
+</html>
